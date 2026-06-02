@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://cthdhmh8ngrsn"]
+
+[ext_resource type="Texture2D" uid="uid://bmmj6qvhe3ibb" path="res://assets/sprites/Menu/Button_1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2hqbujugx80i" path="res://assets/sprites/Menu/Menu_Inventory.png" id="2"]
+[ext_resource type="FontFile" uid="uid://3hf4p5jpfd1q" path="res://Fonts/pixelart.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://5qtrx515q5ur" path="res://assets/sprites/Menu/Button_1_GREEN.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b5h4ru7by5kdy" path="res://assets/sprites/Menu/Button_1_RED.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://lsg8wclj48mj" path="res://assets/sprites/Menu/Button_1_GRAY.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://csn3hlw8qydop" path="res://assets/sprites/Menu/Button_1_GREEN_PRESSED.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://crrv5qyvfcqsy" path="res://assets/sprites/Menu/Button_1_GRAY_PRESSED.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://k7my61iddljd" path="res://assets/sprites/Menu/Button_1_RED_PRESSED.png" id="9"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.99994
+offset_right = 1026.0
+offset_bottom = 602.0
+
+[node name="Fondo" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("2")
+
+[node name="PauseLabel" type="Label" parent="Control/Fondo"]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 3.0
+offset_bottom = 53.0
+theme_override_fonts/font = SubResource("1")
+text = "pause menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -87.0
+offset_right = 112.0
+offset_bottom = 136.0
+alignment = 1
+
+[node name="Continue" type="TextureButton" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(112, 60)
+layout_mode = 2
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("4")
+texture_disabled = ExtResource("6")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Continue"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -15.2924
+offset_right = 72.0
+offset_bottom = 12.7076
+theme_override_fonts/font = SubResource("2")
+text = "CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureButton" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(224, 60)
+layout_mode = 2
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("6")
+texture_disabled = ExtResource("6")
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/Settings"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -11.0
+offset_right = 112.0
+offset_bottom = 7.0
+theme_override_fonts/font = SubResource("2")
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(224, 60)
+layout_mode = 2
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("9")
+texture_hover = ExtResource("5")
+texture_disabled = ExtResource("6")
+stretch_mode = 0
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer/Quit"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -9.0
+offset_right = 113.0
+offset_bottom = 9.0
+theme_override_fonts/font = SubResource("2")
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1

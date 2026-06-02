@@ -1,0 +1,441 @@
+[gd_scene load_steps=33 format=3 uid="uid://dbefyc6ensmrb"]
+
+[ext_resource type="Script" uid="uid://ddrp3i8kyg42s" path="res://scripts/Main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b5fxi08txm4oe" path="res://assets/sprites/Menu/Button_Pause_Menu.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://k7my61iddljd" path="res://assets/sprites/Menu/Button_1_RED_PRESSED.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b5h4ru7by5kdy" path="res://assets/sprites/Menu/Button_1_RED.png" id="4"]
+[ext_resource type="FontFile" uid="uid://3hf4p5jpfd1q" path="res://Fonts/pixelart.ttf" id="5"]
+[ext_resource type="Texture2D" uid="uid://csn3hlw8qydop" path="res://assets/sprites/Menu/Button_1_GREEN_PRESSED.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://5qtrx515q5ur" path="res://assets/sprites/Menu/Button_1_GREEN.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bmmj6qvhe3ibb" path="res://assets/sprites/Menu/Button_1.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://crrv5qyvfcqsy" path="res://assets/sprites/Menu/Button_1_GRAY_PRESSED.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://lsg8wclj48mj" path="res://assets/sprites/Menu/Button_1_GRAY.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c2hqbujugx80i" path="res://assets/sprites/Menu/Menu_Inventory.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bdb3xy1jtd4dy" path="res://assets/sprites/Menu/Button_Pause_Menu_HOVER.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dprib4bko8148" path="res://assets/sprites/Menu/Lifebar.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dohc7p5a867se" path="res://assets/sprites/Menu/Bar_Container.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cqnsnbk700kvl" path="res://assets/sprites/Menu/Apple.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bldy2piseiq6c" path="res://assets/sprites/Menu/Yellow_Battery.png" id="15_hri7i"]
+[ext_resource type="Texture2D" uid="uid://ck6i4v334nryx" path="res://assets/sprites/Menu/Heart.png" id="16"]
+[ext_resource type="Script" uid="uid://c8fs1qfep7bh5" path="res://scripts/LifeMenu.gd" id="17"]
+[ext_resource type="FontFile" uid="uid://yv3g08rodfbp" path="res://Fonts/IMMORTAL.ttf" id="18"]
+[ext_resource type="Texture2D" uid="uid://2uuiuwwhpakq" path="res://assets/sprites/Menu/Lifebar_under.png" id="19"]
+[ext_resource type="Script" uid="uid://vpvqrijx02n" path="res://scripts/HungerMenu.gd" id="26"]
+[ext_resource type="Script" uid="uid://cuomt2hehpm23" path="res://scripts/AmmoMenu.gd" id="27"]
+[ext_resource type="Script" uid="uid://coe4fmqtuy0hr" path="res://scripts/ScoreLabel.gd" id="28"]
+[ext_resource type="PackedScene" uid="uid://cd3xpi2nlp3tq" path="res://LoadingOverlay.tscn" id="29"]
+[ext_resource type="AudioStream" uid="uid://b7i6lnx1mtfwy" path="res://assets/Sounds/Bgm/Ogg/Boss.ogg" id="bgm_boss"]
+[ext_resource type="AudioStream" uid="uid://bu11tnygyeki7" path="res://assets/Sounds/Bgm/Ogg/StrangeFarm.ogg" id="bgm_strange"]
+[ext_resource type="AudioStream" uid="uid://bdhh3kyyklp4s" path="res://assets/Sounds/Bgm/Ogg/Swamp.ogg" id="bgm_swamp"]
+[ext_resource type="Script" uid="uid://dn32fu6wa4gsi" path="res://interface/PauseMenu_Esc.gd" id="pause_esc"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("18")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("18")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("5")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("5")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1")
+
+[node name="CanvasMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 2
+
+[node name="ControlMenu" type="Control" parent="CanvasMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.66473
+offset_top = -1.39014
+offset_right = 2.66467
+offset_bottom = -1.39014
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PauseButton" type="TextureButton" parent="CanvasMenu/ControlMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+texture_normal = ExtResource("2")
+texture_hover = ExtResource("12")
+stretch_mode = 0
+
+[node name="LifeMenu" type="Control" parent="CanvasMenu/ControlMenu"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 340.0
+offset_bottom = 2.0
+script = ExtResource("17")
+
+[node name="HealthContainer" type="TextureRect" parent="CanvasMenu/ControlMenu/LifeMenu"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("14")
+
+[node name="HeartSym" type="TextureRect" parent="CanvasMenu/ControlMenu/LifeMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("16")
+expand_mode = 1
+
+[node name="LifeBar" type="TextureProgressBar" parent="CanvasMenu/ControlMenu/LifeMenu"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 3.0
+offset_right = 334.0
+offset_bottom = 37.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("19")
+texture_progress = ExtResource("13")
+tint_progress = Color(0.054902, 1, 0, 1)
+
+[node name="LifeLabel" type="Label" parent="CanvasMenu/ControlMenu/LifeMenu"]
+layout_mode = 0
+offset_left = 48.0975
+offset_top = 5.57897
+offset_right = 120.098
+offset_bottom = 31.579
+theme_override_fonts/font = SubResource("1")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HungerMenu" type="Control" parent="CanvasMenu/ControlMenu"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 40.0
+offset_right = 342.0
+offset_bottom = 40.0
+script = ExtResource("26")
+
+[node name="HungerContainer" type="TextureRect" parent="CanvasMenu/ControlMenu/HungerMenu"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("14")
+
+[node name="AppleSym" type="TextureRect" parent="CanvasMenu/ControlMenu/HungerMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("15")
+expand_mode = 1
+
+[node name="HungerBar" type="TextureProgressBar" parent="CanvasMenu/ControlMenu/HungerMenu"]
+custom_minimum_size = Vector2(200, 32)
+layout_mode = 0
+offset_left = 134.0
+offset_top = 4.0
+offset_right = 334.0
+offset_bottom = 36.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("19")
+texture_progress = ExtResource("13")
+tint_progress = Color(0, 0.486275, 1, 1)
+
+[node name="HungerLabel" type="Label" parent="CanvasMenu/ControlMenu/HungerMenu"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 6.71001
+offset_right = 121.0
+offset_bottom = 32.71
+theme_override_fonts/font = SubResource("2")
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmoMenu" type="Control" parent="CanvasMenu/ControlMenu"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 342.0
+offset_bottom = 78.0
+script = ExtResource("27")
+
+[node name="AmmoContainer" type="TextureRect" parent="CanvasMenu/ControlMenu/AmmoMenu"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("14")
+
+[node name="AmmoSym" type="TextureRect" parent="CanvasMenu/ControlMenu/AmmoMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture = ExtResource("15_hri7i")
+expand_mode = 1
+
+[node name="AmmoBar" type="TextureProgressBar" parent="CanvasMenu/ControlMenu/AmmoMenu"]
+custom_minimum_size = Vector2(200, 32)
+layout_mode = 0
+offset_left = 134.0
+offset_top = 4.0
+offset_right = 334.0
+offset_bottom = 36.0
+max_value = 50.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("19")
+texture_progress = ExtResource("13")
+tint_progress = Color(1, 0.85, 0, 1)
+
+[node name="AmmoLabel" type="Label" parent="CanvasMenu/ControlMenu/AmmoMenu"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 6.71001
+offset_right = 121.0
+offset_bottom = 32.71
+theme_override_fonts/font = SubResource("2")
+text = "50/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="CanvasMenu/ControlMenu"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -88.0
+offset_right = 280.0
+offset_bottom = -48.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 28
+text = "Level: 0"
+
+[node name="ScoreLabel" type="Label" parent="CanvasMenu/ControlMenu"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -48.0
+offset_right = 280.0
+offset_bottom = -8.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 32
+text = "SCORE: 0"
+script = ExtResource("28")
+
+[node name="BuffsLabel" type="Label" parent="CanvasMenu/ControlMenu"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -312.0
+offset_top = -240.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("18")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="PauseMenu" type="Control" parent="CanvasMenu"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.792
+offset_top = -226.5
+offset_right = 212.708
+offset_bottom = 226.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("pause_esc")
+
+[node name="Fondo" type="NinePatchRect" parent="CanvasMenu/PauseMenu"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("11")
+
+[node name="PauseLabel" type="Label" parent="CanvasMenu/PauseMenu/Fondo"]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 3.0
+offset_bottom = 53.0
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 32
+text = "pause menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasMenu/PauseMenu"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -87.0
+offset_right = 112.0
+offset_bottom = 136.0
+mouse_filter = 0
+alignment = 1
+
+[node name="Continue" type="TextureButton" parent="CanvasMenu/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(112, 60)
+layout_mode = 2
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("6")
+texture_hover = ExtResource("7")
+texture_disabled = ExtResource("10")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasMenu/PauseMenu/VBoxContainer/Continue"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -15.2924
+offset_right = 72.0
+offset_bottom = 12.7076
+theme_override_fonts/font = SubResource("4")
+text = "CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureButton" parent="CanvasMenu/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(224, 60)
+layout_mode = 2
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("9")
+texture_hover = ExtResource("10")
+texture_disabled = ExtResource("10")
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="CanvasMenu/PauseMenu/VBoxContainer/Settings"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -11.0
+offset_right = 112.0
+offset_bottom = 7.0
+theme_override_fonts/font = SubResource("4")
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureButton" parent="CanvasMenu/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(224, 60)
+layout_mode = 2
+texture_normal = ExtResource("8")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
+texture_disabled = ExtResource("10")
+stretch_mode = 0
+
+[node name="Label3" type="Label" parent="CanvasMenu/PauseMenu/VBoxContainer/Quit"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -9.0
+offset_right = 113.0
+offset_bottom = 9.0
+theme_override_fonts/font = SubResource("4")
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadingOverlay" parent="." instance=ExtResource("29")]
+
+[node name="BgmStrange" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("bgm_strange")
+autoplay = true
+
+[node name="BgmSwamp" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("bgm_swamp")
+
+[node name="BgmBoss" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("bgm_boss")
+
+[connection signal="pressed" from="CanvasMenu/ControlMenu/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="CanvasMenu/PauseMenu/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="CanvasMenu/PauseMenu/VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="CanvasMenu/PauseMenu/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

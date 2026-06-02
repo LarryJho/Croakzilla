@@ -1,0 +1,219 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2f4di1pfgvd"]
+
+[ext_resource type="FontFile" uid="uid://3hf4p5jpfd1q" path="res://Fonts/pixelart.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://yv3g08rodfbp" path="res://Fonts/IMMORTAL.ttf" id="1_immortal"]
+[ext_resource type="Script" uid="uid://c1jond7ge2hvr" path="res://interface/Tutorial.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bmmj6qvhe3ibb" path="res://assets/sprites/Menu/Button_1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dovs4c8j8eupr" path="res://assets/sprites/Intro/Player_Head.png" id="3_28mal"]
+[ext_resource type="Texture2D" uid="uid://5qtrx515q5ur" path="res://assets/sprites/Menu/Button_1_GREEN.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://csn3hlw8qydop" path="res://assets/sprites/Menu/Button_1_GREEN_PRESSED.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b5h4ru7by5kdy" path="res://assets/sprites/Menu/Button_1_RED.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://k7my61iddljd" path="res://assets/sprites/Menu/Button_1_RED_PRESSED.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://lsg8wclj48mj" path="res://assets/sprites/Menu/Button_1_GRAY.png" id="8"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 60.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 56
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemySprite" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -160.0
+offset_right = 64.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayerSprite" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -487.0
+offset_top = 118.0
+offset_right = -246.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_28mal")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BodyLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -20.0
+offset_right = 500.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_immortal")
+theme_override_font_sizes/font_size = 28
+text = "Body"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PrevButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("4")
+texture_disabled = ExtResource("8")
+stretch_mode = 0
+
+[node name="PrevLabel" type="Label" parent="PrevButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 28
+text = "PREV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("4")
+texture_disabled = ExtResource("8")
+stretch_mode = 0
+
+[node name="NextLabel" type="Label" parent="NextButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 28
+text = "NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinishButton" type="TextureButton" parent="."]
+visible = false
+custom_minimum_size = Vector2(160, 60)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("6")
+stretch_mode = 0
+
+[node name="FinishLabel" type="Label" parent="FinishButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -20.0
+offset_right = 80.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 28
+text = "FINISH"
+horizontal_alignment = 1
+vertical_alignment = 1

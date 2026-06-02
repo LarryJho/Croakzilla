@@ -1,0 +1,364 @@
+[gd_scene load_steps=25 format=3 uid="uid://dx0t8vpecx422"]
+
+[ext_resource type="Texture2D" uid="uid://hbr0pi80dhid" path="res://assets/sprites/Boss/Croakzilla_Boss.png" id="1"]
+[ext_resource type="Script" uid="uid://dyhdypb0y4evm" path="res://Mobs/Enemy.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://wsp8hkrdrq5t" path="res://assets/Sounds/Effects/Ribbit.ogg" id="sfx_ribbit"]
+[ext_resource type="AudioStream" uid="uid://dmdsryl73cuul" path="res://assets/Sounds/Effects/RibbitMF.ogg" id="sfx_ribbit_mf"]
+
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="13"]
+atlas = ExtResource("1")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("1")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("1")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("1")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="14"]
+atlas = ExtResource("1")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource("1")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("1")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource("1")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="10"]
+atlas = ExtResource("1")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="11"]
+atlas = ExtResource("1")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="12"]
+atlas = ExtResource("1")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}, {
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}],
+"loop": true,
+"name": &"Der_Atk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}, {
+"duration": 1.0,
+"texture": SubResource("13")
+}, {
+"duration": 1.0,
+"texture": SubResource("1")
+}],
+"loop": true,
+"name": &"Der_Damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}],
+"loop": true,
+"name": &"Der_Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("1")
+}],
+"loop": true,
+"name": &"Der_Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}],
+"loop": true,
+"name": &"Down_Atk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("14")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}],
+"loop": true,
+"name": &"Down_Damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("4")
+}],
+"loop": true,
+"name": &"Down_Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}],
+"loop": true,
+"name": &"Down_Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}],
+"loop": true,
+"name": &"Izq_Atk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("13")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}],
+"loop": true,
+"name": &"Izq_Damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("7")
+}],
+"loop": true,
+"name": &"Izq_Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}],
+"loop": true,
+"name": &"Izq_Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}],
+"loop": true,
+"name": &"Up_Atk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("14")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}],
+"loop": true,
+"name": &"Up_Damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("10")
+}],
+"loop": true,
+"name": &"Up_Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}],
+"loop": true,
+"name": &"Up_Move",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="18"]
+size = Vector2(48, 48)
+
+[sub_resource type="Gradient" id="Gradient_aura"]
+colors = PackedColorArray(0.6, 0.2, 0.9, 1, 0.6, 0.2, 0.9, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aura"]
+gradient = SubResource("Gradient_aura")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="16"]
+bg_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="17"]
+bg_color = Color(0.9, 0.1, 0.1, 1)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2")
+max_health = 200
+attack = 10
+kill_score = 100
+drop_chance = 0.0
+drops_elite = true
+heart_drop_chance = 0.0
+battery_drop_chance = 0.0
+idle_sound = ExtResource("sfx_ribbit")
+death_sound = ExtResource("sfx_ribbit")
+sfx_bus = &"Master"
+detection_range_tiles = 100.0
+lose_range_tiles = 200.0
+sleep_range_tiles = 110.0
+wake_range_tiles = 109.0
+attack_range_tiles = 1.8
+attack_knockback = 64.0
+require_los_to_detect = false
+can_pass_walls = true
+direct_pursuit = true
+body_hit_radius_mult = 1.5
+baby_speed_mult = 0.6
+laser_enabled = true
+laser_width = 2.0
+laser_overshoot_tiles = 5.0
+laser_hit_radius = 48.0
+laser_damages_enemies = true
+triggers_win = true
+charge_attack_enabled = true
+rapid_beam_enabled = true
+radial_burst_enabled = true
+radial_burst_sound = ExtResource("sfx_ribbit_mf")
+heal_attack_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 60)
+collide_with_areas = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("15")
+animation = &"Down_Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("18")
+
+[node name="RayEntities" type="RayCast2D" parent="."]
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.6, 0.2, 0.9, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_aura")
+texture_scale = 1.5
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(48, 6)
+offset_left = -24.0
+offset_top = 36.0
+offset_right = 24.0
+offset_bottom = 42.0
+theme_override_styles/background = SubResource("16")
+theme_override_styles/fill = SubResource("17")
+show_percentage = false

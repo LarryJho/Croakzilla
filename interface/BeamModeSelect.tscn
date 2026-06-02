@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8x4lqe7ds0rj"]
+
+[ext_resource type="FontFile" uid="uid://3hf4p5jpfd1q" path="res://Fonts/pixelart.ttf" id="1"]
+[ext_resource type="Script" uid="uid://cnjdna41siqmw" path="res://interface/BeamModeSelect.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bmmj6qvhe3ibb" path="res://assets/sprites/Menu/Button_1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://5qtrx515q5ur" path="res://assets/sprites/Menu/Button_1_GREEN.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://csn3hlw8qydop" path="res://assets/sprites/Menu/Button_1_GREEN_PRESSED.png" id="5"]
+
+[node name="BeamModeSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.06, 0.06, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -260.0
+offset_right = 400.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 64
+text = "BEAM MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="FixedButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 70)
+layout_mode = 2
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FixedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 32
+text = "FIXED BEAM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CursorButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 70)
+layout_mode = 2
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/CursorButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 32
+text = "CURSOR BEAM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = 102.0
+offset_right = 520.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 20
+text = "FIXED  beam:  Shoots in the direction you last moved (4 cardinals).
+              Left-click PUNCHES adjacent enemies or WALKS to the
+              clicked floor tile.  Space also fires.
+
+CURSOR beam:  Shoots toward the mouse cursor (any angle).  Left-click FIRES.
+              Movement is keyboard-only (WASD / arrows).  Space also fires."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

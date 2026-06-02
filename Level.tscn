@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg2yw7hrfcw3g"]
+
+[ext_resource type="TileSet" uid="uid://dw5rgmgoyj1ec" path="res://assets/FOW.tres" id="2_t7iv1"]
+[ext_resource type="Script" uid="uid://br5jkbkbdklwa" path="res://scripts/Level.gd" id="3"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("3")
+
+[node name="Rooms" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Map" type="TileMapLayer" parent="."]
+show_behind_parent = true
+
+[node name="Scenario" type="TileMapLayer" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Stairs" type="TileMapLayer" parent="."]
+
+[node name="Fog" type="TileMapLayer" parent="."]
+z_index = 1
+tile_set = ExtResource("2_t7iv1")

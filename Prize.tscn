@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://clxp0tpp5rm3y"]
+
+[ext_resource type="Texture2D" path="res://assets/Power_Up_Prize.png" id="1"]
+[ext_resource type="Script" path="res://scripts/Prize.gd" id="2"]
+
+[sub_resource type="Gradient" id="Gradient_light"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_light"]
+gradient = SubResource("Gradient_light")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Prize" type="Node2D"]
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 1.5
+texture = SubResource("GradientTexture2D_light")

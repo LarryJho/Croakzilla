@@ -7,6 +7,14 @@ Fight through procedurally generated biomes, manage your resources
 and earn the highest score (and star rating) you can before
 facing the boss.
 
+🎮 [**Play in your browser on itch.io →**](https://larryjho.itch.io/the-hunt-of-croakzilla)
+
+*Gameplay*
+
+<video src="https://github.com/user-attachments/assets/44d19a63-7179-4b07-a6c8-595746b3339f" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/31800bc0-ea9f-453a-931b-aac78a45d297" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/33963e81-8720-4a1e-a701-8c614ac47386" autoplay loop muted playsinline></video>
+
 ---
 
 ## About the project

@@ -11,9 +11,8 @@ facing the boss.
 
 *Gameplay*
 
-<video src="https://github.com/user-attachments/assets/44d19a63-7179-4b07-a6c8-595746b3339f" autoplay loop muted playsinline></video>
-<video src="https://github.com/user-attachments/assets/31800bc0-ea9f-453a-931b-aac78a45d297" autoplay loop muted playsinline></video>
-<video src="https://github.com/user-attachments/assets/33963e81-8720-4a1e-a701-8c614ac47386" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/6c5830ac-6229-42a1-8ab3-554ba9e08069" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/b77b5f14-159b-4df0-9310-af04369cbcd4" autoplay loop muted playsinline></video>
 
 ---
 

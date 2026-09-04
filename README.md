@@ -78,4 +78,16 @@ good resource economy.
 
 ## Credits
 
-Made by **LarryJho**. Originally a game jam entry, patched post-jam.
+Programming, design, procedural generation and sound effects by **LarryJho**.
+
+### Music
+
+| Track | Used for | Author | License |
+|---|---|---|---|
+| Storm | Menu theme | [alkakrab](https://alkakrab.itch.io/free-12-tracks-pixel-rpg-game-music-pack) | Free for commercial use |
+| Strange Farm | Noob Woods | [alkakrab](https://alkakrab.itch.io/free-12-tracks-pixel-rpg-game-music-pack) | Free for commercial use |
+| Swamp | Marshlands | [alkakrab](https://alkakrab.itch.io/free-12-tracks-pixel-rpg-game-music-pack) | Free for commercial use |
+| [Small Town Brawl](https://soundcloud.com/leviathan254/royalty-free-rpg-battle-theme-free-download) | Boss fight | [LeviathanMusic](https://soundcloud.com/leviathan254) | CC BY-SA |
+
+Tracks 1–3 are from the *Free 12 Tracks Pixel RPG Game Music Pack* by alkakrab.
+"Small Town Brawl" is used under CC BY-SA; attribution is required by the license.
